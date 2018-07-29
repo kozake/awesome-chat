@@ -37,6 +37,10 @@ export class RoomPage implements OnInit {
     this.navCtrl.goRoot('chat/' + key);
   }
 
+  addRoom() {
+    this.navCtrl.goForward('add-room');
+  }
+
   async signOut() {
     try {
       await firebase.auth().signOut();
