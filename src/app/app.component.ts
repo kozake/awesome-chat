@@ -6,12 +6,12 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import * as firebase from 'firebase';
 
 const config = {
-  apiKey: 'AIzaSyDubXW4Ylga9xJrBr2raEBs45bbPm9xyT0',
-  authDomain: 'awesome-chat-2b88d.firebaseapp.com',
-  databaseURL: 'https://awesome-chat-2b88d.firebaseio.com',
-  projectId: 'awesome-chat-2b88d',
-  storageBucket: 'awesome-chat-2b88d.appspot.com',
-  messagingSenderId: '544074400018'
+  apiKey: 'AIzaSyBLcdUiqQdqmARt_tRRvjUhmmZfFMHpNto',
+  authDomain: 'awesome-chat-f7118.firebaseapp.com',
+  databaseURL: 'https://awesome-chat-f7118.firebaseio.com',
+  projectId: 'awesome-chat-f7118',
+  storageBucket: 'awesome-chat-f7118.appspot.com',
+  messagingSenderId: '32939361989'
 };
 
 @Component({
