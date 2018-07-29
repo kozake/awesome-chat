@@ -11,14 +11,30 @@ export class RoomPage implements OnInit {
 
   constructor(public navCtrl: NavController) { }
 
-  ngOnInit() {
+  rooms = [];
+
+  async ngOnInit() {
+
     firebase.auth().onAuthStateChanged((user) => {
-      console.log(user);
       if (user) {
+        firebase.database().ref('chatrooms/').on('value', resp => {
+          if (resp) {
+            this.rooms = [];
+            resp.forEach(childSnapshot => {
+              const room = childSnapshot.val();
+              room.key = childSnapshot.key;
+              this.rooms.push(room);
+            });
+          }
+        });
       } else {
         this.navCtrl.goRoot('signin');
       }
     });
+  }
+
+  joinRoom(key) {
+    this.navCtrl.goRoot('chat/' + key);
   }
 
   async signOut() {
