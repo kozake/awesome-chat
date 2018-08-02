@@ -8,7 +8,7 @@ import * as firebase from 'Firebase';
   styleUrls: ['./add-room.page.scss'],
 })
 export class AddRoomPage implements OnInit {
-  data = { roomname: '' };
+  data: { roomname: string } = { roomname: '' };
 
   constructor(public navCtrl: NavController) { }
 

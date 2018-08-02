@@ -8,7 +8,7 @@ import * as firebase from 'firebase';
   styleUrls: ['./signup.page.scss'],
 })
 export class SignupPage implements OnInit {
-  data = { email: '', password: '' };
+  data: { email: string, password: string } = { email: '', password: '' };
 
   constructor(
     public navCtrl: NavController,

@@ -9,7 +9,7 @@ import * as firebase from 'firebase';
 })
 export class SigninPage implements OnInit {
 
-  data = { email: '', password: '' };
+  data: { email: string, password: string } = { email: '', password: '' };
 
   constructor(
     public navCtrl: NavController,
